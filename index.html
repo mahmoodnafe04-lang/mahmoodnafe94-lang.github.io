@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>موقعي التعليمي - موقع جاهز (HTML)</title>
+  <style>
+    /* Reset بسيط */
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Tahoma, Arial, sans-serif;background:#daba04d3;color:#222;line-height:1.6}
+    body{background:linear-gradient(90deg,#ffffff93,#06d1ffc2)}
+    
+    
+
+    /* رأس الموقع */
+    header{background:linear-gradient(90deg,#ffffffc9,#06d1ffc2);color:#ffffff;padding:20px 16px}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    header h1{margin:0;font-size:1.6rem}
+    nav{margin-top:12px}
+    nav a{color:#fff;text-decoration:none;margin-left:12px;padding:8px 10px;border-radius:6px;display:inline-block}
+    nav a:hover{background:rgba(255,255,255,0.12)}
+
+    /* بنية الصفحات */
+    main{padding:28px 0}
+    .hero{background:#ffffff;border-radius:12px;padding:20px;margin-bottom:18px;box-shadow:0 6px 18px rgba(10,20,40,0.06)}
+    .row{display:flex;gap:18px}
+    .col{flex:1}
+
+    /* بطاقات الدروس */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(10,20,40,0.04)}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0 0 12px;color:#444}
+    .btn{display:inline-block;background:#0b72b9;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none}
+
+    /* شريط جانبي */
+    aside{min-width:220px}
+    .sidebar{background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(10,20,40,0.04)}
+    .sidebar h4{margin-top:0}
+    .small-list{padding-left:0;list-style:none}
+    .small-list li{margin:8px 0}
+
+    /* درس مفصّل */
+    .lesson{background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(10,20,40,0.04);margin-bottom:16px}
+    .lesson h2{margin-top:0}
+
+    /* استجابة */
+    @media (max-width:900px){
+      .row{flex-direction:column}
+      nav a{display:inline-block;margin-left:8px;margin-top:6px}
+    }
+
+    footer{padding:18px 0;text-align:center;color:#666}
+
+    /* تحسينات لطباعة وحفظ */
+    .muted{color:#666;font-size:0.95rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h2>Lets understand</h2>
+      <nav aria-label="القوائم الرئيسية">
+        <a href="#home">الرئيسية</a>
+        <a href="#lessons">الدروس</a>
+        <a href="#resources">مصادر</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact">اتصل بنا</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- القسم الرئيسي - الهيرو -->
+    <section id="home" class="hero">
+      <div class="row">
+        <div class="col">
+          <h2>مرحبا بك في منصة Lets understand</h2>
+          <p class="muted">هذا موقع تعليمي بسيط وجاهز للاستخدام. يمكنك نسخه، تعديله، ورفعه كما تشاء. يعمل بالكامل بصفحة HTML واحدة (مع روابط داخلية) — سهل التشغيل عبر Visual Studio Code و Live Server.</p>
+          <p>الموقع مناسب لدروس قصيرة، شرائح تعليمية، ومحتوى مرئي بسيط. استخدم الروابط بالأعلى للانتقال بين الأقسام.</p>
+        </div>
+        <aside class="col" style="max-width:320px">
+          <div class="sidebar">
+            <h4>شرح مبسط عن الموقع</h4>
+            <ul class="small-list">
+              <li>بيان مفهوم التعصب </li><strong>ذكر بعض صور التعصب</strong></li>
+              <li>توضيح اسباب التعصب</li></li>
+              <li>استنتاج اثار التعصب في الفرد والمجتمع</li>
+<li>بيان موقف الاسلام من التعصب</li>
+<li>الحرص على تجنب مظاهر التعصب</li>
+            </ul>
+            <hr>
+            <h4>روابط مفيدة</h4>
+            <ul class="small-list">
+              <li><a href="#lessons">قائمة الدروس</a></li>
+              <li><a href="#resources">المواد والكتب</a></li>
+              <li><a href="#contact">نموذج اتصال</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- دروس قصيرة -->
+    <section id="lessons">
+      <h2>الدروس</h2>
+      <p class="muted">قائمة دروس قصيرة مع تفاصيل يمكن الوصول إليها بالنقر على "اقرأ أكثر".</p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>درس 1 — مقدمة حول الموضوع</h3>
+          <p>نظرة عامة بسيطة تشرح الهدف من الدورة وما سيتعلمه الطالب في هذا الدرس.</p>
+          <a class="btn" href="#lesson1">اقرأ أكثر</a>
+        </article>
+
+        <article class="card">
+          <h3>درس 2 — أساسيات مهمة</h3>
+          <p>مفاهيم أساسية يحتاج الطالب لفهمها قبل التقدم.</p>
+          <a class="btn" href="#lesson2">اقرأ أكثر</a>
+        </article>
+
+        <article class="card">
+          <h3>درس 3 — تطبيق عملي</h3>
+          <p>تمارين وأمثلة عملية لتثبيت المعلومات.</p>
+          <a class="btn" href="#lesson3">اقرأ أكثر</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- درس 1 مفصل -->
+    <section id="lesson1" class="lesson" aria-labelledby="lesson1-title">
+      <h2 id="lesson1-title">درس 1 — مقدمة حول الموضوع</h2>
+      <p>في هذا الدرس سنستعرض الفكرة العامة: ما المشكلة التي نحلها، ولماذا تُعد هذه المهارة مهمة. اقرأ النقاط التالية بعناية:</p>
+      <ol>
+        <li>فهم السياق العام.</li>
+        <li>الأهداف التعليمية للدرس.</li>
+        <li>مخرجات التعلم المتوقعة.</li>
+      </ol>
+      <p class="muted">نصيحة: استخدم قائمة الأسئلة للاختبار الذاتي بعد مراجعة الدرس.</p>
+    </section>
+
+    <!-- درس 2 مفصل -->
+    <section id="lesson2" class="lesson" aria-labelledby="lesson2-title">
+      <h2 id="lesson2-title">درس 2 — الأساسيات</h2>
+      <p>شرح للمفاهيم الأساسية بشكل مرتب وبسيط مع أمثلة توضيحية:</p>
+      <h4>مفهوم أ</h4>
+      <p>تفصيل موجز عن مفهوم أ وكيفية تطبيقه.</p>
+      <h4>مفهوم ب</h4>
+      <p>تفصيل موجز عن مفهوم ب مع مثال عملي بسيط.</p>
+    </section>
+
+    <!-- درس 3 مفصل -->
+    <section id="lesson3" class="lesson" aria-labelledby="lesson3-title">
+      <h2 id="lesson3-title">درس 3 — تطبيق عملي</h2>
+      <p>تحدي عملي بسيط يمكنك تنفيذه محليًا داخل متصفحك أو على ملف HTML مستقل:</p>
+      <ol>
+        <li>حدد هدفًا واضحًا للتطبيق.</li>
+        <li>قم بتقسيم المهمة إلى خطوات صغيرة.</li>
+        <li>اختبر النتائج وعدّل ما يلزم.</li>
+      </ol>
+      <p>يمكنك إضافة صور، فيديوهات قصيرة (انستقرام) أو ملفات PDF كمراجع للدروس.</p>
+    </section>
+
+    <!-- مصادر -->
+    <section id="resources" class="lesson">
+      <h2>المصادر والمواد</h2>
+      <p>روابط وملفات مفيدة يمكن وضعها هنا (مثال روابط خارجية أو ملفات قابلة للتحميل):</p>
+      <ul>
+        <li>كتاب: مدخل إلى ... (PDF)</li>
+        <li>فيديو شرح قصير: رابط YouTube أو ملف مضمن</li>
+        <li>تمارين قابلة للطباعة</li>
+      </ul>
+    </section>
+
+    <!-- من نحن -->
+    <section id="about" class="lesson">
+      <h2>عن الموقع</h2>
+      <p>هذا موقع تعليمي بسيط مُعد كقالب جاهز—مناسب للمعلمين والمبدعين الذين يريدون إطلاق دورات صغيرة بسرعة.</p>
+      <p class="muted">يمكنك تعديل النصوص، الألوان، وإضافة/حذف دروس بسهولة من داخل نفس الملف.</p>
+    </section>
+
+    <!-- اتصل بنا -->
+    <section id="contact" class="lesson">
+      <h2>تفضل؟</h2>
+      <p>اي سؤال مش عارف اجابته تفضل اسأل وسيتم الرد عليه فورا👌.</p>
+
+      <form class="card" onsubmit="return false;">
+        <label for="name">الاسم</label><br>
+        <input id="name" type="text" placeholder="اسمك" style="width:100%;padding:8px;margin:8px 0;border-radius:6px;border:1px solid #ddd">
+
+        <label for="email">البريد الإلكتروني</label><br>
+        <input id="email" type="email" placeholder="example@mail.com" style="width:100%;padding:8px;margin:8px 0;border-radius:6px;border:1px solid #ddd">
+
+        <label for="message">الرسالة</label><br>
+        <textarea id="message" rows="5" placeholder="نص الرسالة" style="width:100%;padding:8px;margin:8px 0;border-radius:6px;border:1px solid #ddd"></textarea>
+
+        <button class="btn" style="border:none;cursor:pointer">إرسال</button>
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>@ المصمم محمود العداربة 🖥️ <strong>{A W O}</strong></p>
+    </div>
+  </footer>
+
+</body>
+</html>
